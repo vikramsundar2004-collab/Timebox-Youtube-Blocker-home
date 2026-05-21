@@ -3,17 +3,32 @@ const path = require("path");
 
 const repoRoot = path.resolve(__dirname, "..");
 const defaultExtensionZip = path.resolve(repoRoot, "..", "New project 4", "dist", "timebox-youtube-blocker.zip");
-const sourceZip = process.env.EXTENSION_ZIP_PATH || defaultExtensionZip;
 const outputDir = path.join(repoRoot, "public", "downloads");
+const bundledExtensionZip = path.join(outputDir, "timebox-youtube-blocker-extension.zip");
+const requestedSourceZip = process.env.EXTENSION_ZIP_PATH || defaultExtensionZip;
 
 function wrapBase64(base64) {
   return base64.match(/.{1,76}/g).join("\n");
 }
 
-function ensureSource() {
-  if (!fs.existsSync(sourceZip)) {
-    throw new Error(`Extension zip not found: ${sourceZip}`);
+function resolveSourceZip() {
+  if (fs.existsSync(requestedSourceZip)) {
+    return requestedSourceZip;
   }
+
+  if (fs.existsSync(bundledExtensionZip)) {
+    console.log(`Using bundled extension zip: ${bundledExtensionZip}`);
+    return bundledExtensionZip;
+  }
+
+  throw new Error(
+    [
+      "Extension zip not found.",
+      `Checked: ${requestedSourceZip}`,
+      `Checked bundled fallback: ${bundledExtensionZip}`,
+      "Run this locally once with EXTENSION_ZIP_PATH pointed at the extension zip, then commit public/downloads/timebox-youtube-blocker-extension.zip."
+    ].join("\n")
+  );
 }
 
 function writeWindowsInstaller(base64) {
@@ -77,13 +92,15 @@ read -r -p "Press Return when you are done."
 }
 
 function run() {
-  ensureSource();
   fs.mkdirSync(outputDir, { recursive: true });
+  const sourceZip = resolveSourceZip();
 
   const zipBuffer = fs.readFileSync(sourceZip);
   const base64 = wrapBase64(zipBuffer.toString("base64"));
 
-  fs.copyFileSync(sourceZip, path.join(outputDir, "timebox-youtube-blocker-extension.zip"));
+  if (path.resolve(sourceZip) !== path.resolve(bundledExtensionZip)) {
+    fs.copyFileSync(sourceZip, bundledExtensionZip);
+  }
   writeWindowsInstaller(base64);
   writeMacInstaller(base64);
   fs.writeFileSync(
