@@ -1,0 +1,8 @@
+node_modules/
+.env
+.video-work/
+data/*.json
+data/*.tmp
+*.log
+playwright-report/
+test-results/

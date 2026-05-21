@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Use Your License Key</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,850&family=IBM+Plex+Mono:wght@500;700&family=Source+Sans+3:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav">
+        <a class="brand" href="/"><img src="/assets/icon128.png" alt=""><span>Timebox YouTube Blocker</span></a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="/setup">Setup</a>
+          <a href="/support">Support</a>
+          <a class="button secondary" href="/#buy">Buy for $5</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <p class="eyebrow">Paid customer access</p>
+      <h1>Use or recover your key.</h1>
+      <p class="lead">Enter the email and license key from your receipt page. If you forgot the key, recover it using the same email you used to pay.</p>
+
+      <div class="grid-2">
+        <form id="verify-form" class="panel">
+          <h2>Unlock downloads</h2>
+          <div class="form-row">
+            <label for="verify-email">Email</label>
+            <input id="verify-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="form-row">
+            <label for="license-key">License key</label>
+            <input id="license-key" name="licenseKey" autocomplete="off" required placeholder="TBX-XXXX-XXXX-XXXX-XXXX">
+          </div>
+          <p><button class="accent" type="submit">Show downloads</button></p>
+          <div id="verify-result"></div>
+        </form>
+
+        <form id="recover-form" class="panel">
+          <h2>Recover key by email</h2>
+          <div class="form-row">
+            <label for="recover-email">Email used at checkout</label>
+            <input id="recover-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <p><button type="submit">Email my key</button></p>
+          <div id="recover-result"></div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>Timebox YouTube Blocker</span>
+        <nav aria-label="Footer navigation">
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/support">Support</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="/access.js"></script>
+  </body>
+</html>
