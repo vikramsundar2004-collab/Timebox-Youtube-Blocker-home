@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Timebox YouTube Blocker</title>
-    <meta name="description" content="Buy Timebox YouTube Blocker and download the Chrome extension installer for Windows or Mac.">
+    <meta name="description" content="Download Timebox YouTube Blocker for desktop Chrome on Windows or Mac.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,850&family=IBM+Plex+Mono:wght@500;700&family=Source+Sans+3:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -19,10 +19,9 @@
           <span>Timebox YouTube Blocker</span>
         </a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="/setup">Setup</a>
-          <a href="/access">Use a key</a>
-          <a href="/support">Support</a>
-          <a class="button secondary" href="#buy">Buy for $5</a>
+          <a href="/setup.html">Setup</a>
+          <a href="/support.html">Support</a>
+          <a class="button secondary" href="/download.html">Download</a>
         </nav>
       </div>
     </header>
@@ -30,56 +29,51 @@
     <main id="main">
       <section class="hero">
         <div>
-          <p class="eyebrow">Chrome extension for desktop Chrome</p>
+          <p class="eyebrow">Desktop Chrome extension</p>
           <h1>Block YouTube until you choose a real break.</h1>
           <p class="lead">YouTube is blocked by default. When you click “Give me a break,” you get one 20-minute session. You get three breaks per day, then YouTube stays blocked until tomorrow.</p>
           <div>
-            <a class="button accent" href="#buy">Pay $5 and download</a>
-            <a class="button secondary" href="/setup">See setup steps</a>
+            <a class="button accent" href="/download.html">Download now</a>
+            <a class="button secondary" href="/setup.html">Watch setup video</a>
           </div>
         </div>
 
-        <form id="checkout-form" class="panel checkout-panel" aria-labelledby="buy">
+        <div class="panel checkout-panel">
           <div>
-            <h2 id="buy">Get the extension</h2>
-            <p class="price">$5</p>
-            <p class="small">One-time purchase. Your email is used for your license key and recovery.</p>
+            <h2>Quick download</h2>
+            <p class="small">Paid in person? Use the button for your computer.</p>
           </div>
-          <div class="form-row">
-            <label for="email">Email for your license key</label>
-            <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
-          </div>
-          <button class="accent" type="submit">Continue to Stripe</button>
-          <p id="checkout-message" class="message hidden" role="status"></p>
-          <p class="small">On a phone, you can pay and save your key. The extension itself installs on desktop Chrome for Windows, Mac, or Chromebook.</p>
-        </form>
+          <a class="button accent" href="/downloads/timebox-youtube-blocker-windows.cmd" download>Download for Windows</a>
+          <a class="button secondary" href="/downloads/timebox-youtube-blocker-mac.command" download>Download for Mac</a>
+          <p class="small">Chrome on iPhone does not install Chrome extensions. Download on a Windows, Mac, Chromebook, or desktop Chromium browser.</p>
+        </div>
       </section>
 
       <section class="band">
         <div class="section grid-2">
           <div>
-            <h2>What people get after paying</h2>
+            <h2>What it does</h2>
             <ol class="steps">
-              <li><span>A license key on the success page, also recoverable by email.</span></li>
-              <li><span>A Windows installer script, a Mac installer script, and the raw extension zip.</span></li>
-              <li><span>A setup video and written steps so the install is clear even before the Chrome Web Store listing is live.</span></li>
+              <li><span>Blocks YouTube, YouTube embeds, YouTube short links, and related video delivery domains.</span></li>
+              <li><span>Gives exactly three 20-minute YouTube breaks per day.</span></li>
+              <li><span>Automatically re-blocks YouTube when the break timer ends.</span></li>
             </ol>
           </div>
           <div class="panel">
-            <h3>Built for the project launch</h3>
-            <p>The checkout uses Stripe’s hosted payment page. After a paid checkout, this site creates a license key, unlocks the download page, and lets the customer recover the key later by email.</p>
-            <p class="small">Once the Chrome Web Store approval finishes, this same site can point people to the official listing too.</p>
+            <h3>Install path for your class launch</h3>
+            <p>This page is made for in-person selling: take cash, tell them the URL, and they click the download button for their computer.</p>
+            <p class="small">Once the Chrome Web Store approval finishes, you can replace these buttons with the official store listing.</p>
           </div>
         </div>
       </section>
 
       <section class="section">
         <h2>The blocker in action</h2>
-        <p class="lead">The extension is local to Chrome: it stores the break count and timer on the user’s device, blocks YouTube-related domains, and automatically re-blocks when the timer ends.</p>
+        <p class="lead">The extension stores the break count and timer locally in Chrome, then keeps blocking YouTube until the user chooses one of their limited breaks.</p>
         <div class="screenshot-strip">
           <img src="/assets/blocked-page.png" alt="The YouTube blocked page with a button to take a break.">
           <img src="/assets/popup-states.png" alt="The extension popup showing blocked and active break states.">
-          <img src="/assets/download-flow.png" alt="The Timebox download flow showing paid access.">
+          <img src="/assets/download-flow.png" alt="The download flow preview.">
         </div>
       </section>
     </main>
@@ -88,9 +82,9 @@
       <div class="footer-inner">
         <span>Timebox YouTube Blocker</span>
         <nav aria-label="Footer navigation">
-          <a href="/privacy">Privacy</a>
-          <a href="/terms">Terms</a>
-          <a href="/support">Support</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/support.html">Support</a>
           <a href="https://github.com/vikramsundar2004-collab/Timebox-Youtube-Blocker-home">GitHub</a>
         </nav>
       </div>

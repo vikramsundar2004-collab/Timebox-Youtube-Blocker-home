@@ -2,25 +2,16 @@
   "name": "timebox-youtube-blocker-home",
   "version": "1.0.0",
   "private": true,
-  "description": "Paid checkout, license recovery, and download site for Timebox YouTube Blocker.",
-  "main": "server.js",
+  "description": "Direct download site for Timebox YouTube Blocker.",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
     "prepare:downloads": "node scripts/prepare-downloads.js",
     "build:video": "node scripts/build-walkthrough-video.mjs",
-    "test": "node --test",
-    "check": "node --check server.js && node --check src/app.js && node --check src/config.js && node --check src/license.js && node --check src/license-store.js && node --check src/mailer.js && node --check scripts/prepare-downloads.js && node --check public/app.js && node --check public/access.js && node --check public/success.js"
+    "test": "node scripts/verify-static-site.js",
+    "check": "node --check scripts/prepare-downloads.js && node --check scripts/build-walkthrough-video.mjs && node --check scripts/verify-static-site.js && node --check public/app.js"
   },
-  "dependencies": {
-    "dotenv": "^16.4.7",
-    "express": "^5.2.1",
-    "nodemailer": "^8.0.7",
-    "stripe": "^22.1.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "playwright-core": "^1.60.0",
-    "supertest": "^7.0.0"
+    "playwright-core": "^1.60.0"
   },
   "engines": {
     "node": ">=20"

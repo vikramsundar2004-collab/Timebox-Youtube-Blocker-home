@@ -4,11 +4,12 @@ Support email: `vikram.sundar2004@gmail.com`
 
 Common setup steps:
 
-1. Download the Windows or Mac installer after payment.
-2. Run the installer file.
-3. Open `chrome://extensions`.
-4. Turn on Developer mode.
-5. Click Load unpacked.
-6. Choose the `TimeboxYouTubeBlockerExtension` folder.
+1. Open the download page.
+2. Download the Windows or Mac installer.
+3. Run the installer file.
+4. Open `chrome://extensions`.
+5. Turn on Developer mode.
+6. Click Load unpacked.
+7. Choose the `TimeboxYouTubeBlockerExtension` folder.
 
-If a customer forgets their key, they can use `/access` with the email used at checkout.
+If Chrome blocks the script download, use the raw extension zip and follow the manual setup steps.

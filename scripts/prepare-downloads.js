@@ -4,7 +4,7 @@ const path = require("path");
 const repoRoot = path.resolve(__dirname, "..");
 const defaultExtensionZip = path.resolve(repoRoot, "..", "New project 4", "dist", "timebox-youtube-blocker.zip");
 const sourceZip = process.env.EXTENSION_ZIP_PATH || defaultExtensionZip;
-const outputDir = path.join(repoRoot, "protected-downloads");
+const outputDir = path.join(repoRoot, "public", "downloads");
 
 function wrapBase64(base64) {
   return base64.match(/.{1,76}/g).join("\n");
@@ -86,6 +86,22 @@ function run() {
   fs.copyFileSync(sourceZip, path.join(outputDir, "timebox-youtube-blocker-extension.zip"));
   writeWindowsInstaller(base64);
   writeMacInstaller(base64);
+  fs.writeFileSync(
+    path.join(outputDir, "README.txt"),
+    [
+      "Timebox YouTube Blocker downloads",
+      "",
+      "Windows: open timebox-youtube-blocker-windows.cmd",
+      "Mac: open timebox-youtube-blocker-mac.command",
+      "Manual install: use timebox-youtube-blocker-extension.zip",
+      "",
+      "Chrome setup:",
+      "1. Open chrome://extensions",
+      "2. Turn on Developer mode",
+      "3. Click Load unpacked",
+      "4. Choose the TimeboxYouTubeBlockerExtension folder"
+    ].join("\n")
+  );
 
   console.log(`Prepared downloads in ${outputDir}`);
 }

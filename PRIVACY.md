@@ -2,10 +2,10 @@
 
 Timebox YouTube Blocker blocks YouTube locally in Chrome. The extension stores its timer, daily break count, and settings in Chrome storage on the user's device.
 
-The website stores the email address used at checkout, the generated license key, and the Stripe checkout session ID so paid customers can download the extension and recover their key.
+This website is a static download page. It does not collect emails, names, payment details, or license keys.
 
-Payments are processed by Stripe. This site does not store card numbers or payment credentials.
+Payments are handled in person. This site does not process card payments.
 
-Customer emails are used for license delivery and recovery. They are not sold.
+Render or the browser may create ordinary server logs for security and reliability.
 
 For support, contact `vikram.sundar2004@gmail.com`.
