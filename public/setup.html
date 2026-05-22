@@ -23,43 +23,71 @@
     <main>
       <section class="section">
         <p class="eyebrow">Desktop Chrome setup</p>
-        <h1>Install it in a few minutes.</h1>
-        <p class="lead">Chrome extensions do not install inside Chrome on iPhone. Open this page on a Windows, Mac, Chromebook, or desktop Chromium browser.</p>
+        <h1>Watch the install path.</h1>
+        <p class="lead">The Windows video uses the real screen recording from the install. Mac and manual setup use the same real Chrome Load unpacked steps after the platform-specific download step. Chrome extensions install on computers, not iPhone, iPad, or Android Chrome.</p>
 
-        <div class="media-frame">
-          <video controls preload="metadata" poster="/assets/setup-video-poster.png">
-            <source src="/assets/setup-walkthrough.webm" type="video/webm">
-            Your browser can play the setup video from <a href="/assets/setup-walkthrough.webm">this file</a>.
-          </video>
+        <div class="video-grid">
+          <article class="video-card">
+            <h2>Windows real install</h2>
+            <p>Actual trimmed Windows recording: download, Load unpacked, select the folder, and test YouTube.</p>
+            <div class="media-frame">
+              <video controls preload="metadata" poster="/assets/setup-windows-poster.png">
+                <source src="/assets/setup-windows.webm" type="video/webm">
+                <a href="/assets/setup-windows.webm">Open the Windows setup video</a>.
+              </video>
+            </div>
+            <p><a class="button accent" href="/downloads/timebox-youtube-blocker-windows.cmd" download>Download Windows installer</a></p>
+          </article>
+
+          <article class="video-card">
+            <h2>Mac setup guide</h2>
+            <p>Use the Mac installer first. After that, the Chrome extension page steps are the same as Windows.</p>
+            <div class="media-frame">
+              <video controls preload="metadata" poster="/assets/setup-mac-poster.png">
+                <source src="/assets/setup-mac.webm" type="video/webm">
+                <a href="/assets/setup-mac.webm">Open the Mac setup video</a>.
+              </video>
+            </div>
+            <p><a class="button accent" href="/downloads/timebox-youtube-blocker-mac.command" download>Download Mac installer</a></p>
+          </article>
+
+          <article class="video-card">
+            <h2>Manual zip setup</h2>
+            <p>Use this for Chromebook, Linux, or blocked installer downloads. Extract the zip before Load unpacked.</p>
+            <div class="media-frame">
+              <video controls preload="metadata" poster="/assets/setup-chromebook-linux-poster.png">
+                <source src="/assets/setup-chromebook-linux.webm" type="video/webm">
+                <a href="/assets/setup-chromebook-linux.webm">Open the manual setup video</a>.
+              </video>
+            </div>
+            <p><a class="button secondary" href="/downloads/timebox-youtube-blocker-extension.zip" download>Download raw zip</a></p>
+          </article>
         </div>
       </section>
 
       <section class="band">
         <div class="section grid-2">
           <div>
-            <h2>Windows</h2>
+            <h2>Quick steps</h2>
             <ol class="steps">
-              <li><span>Open the <a href="/download.html">download page</a> and click <strong>Download Windows installer</strong>.</span></li>
-              <li><span>Open the downloaded <span class="code">.cmd</span> file. Windows may ask you to confirm because it is a script.</span></li>
-              <li><span>The script creates a Timebox extension folder and opens the Chrome extensions page.</span></li>
-              <li><span>Turn on <strong>Developer mode</strong>, click <strong>Load unpacked</strong>, then choose the Timebox folder that opened.</span></li>
+              <li><span>Download the installer for your computer, or download the raw zip if your device needs manual setup.</span></li>
+              <li><span>If using the raw zip, extract it into a folder you will keep. Chrome needs the folder, not the zip file.</span></li>
+              <li><span>Open <span class="code">chrome://extensions</span>, turn on <strong>Developer mode</strong>, and click <strong>Load unpacked</strong>.</span></li>
+              <li><span>Choose the Timebox extension folder, then test it by opening YouTube.</span></li>
             </ol>
           </div>
-          <div>
-            <h2>Mac</h2>
-            <ol class="steps">
-              <li><span>Open the <a href="/download.html">download page</a> and click <strong>Download Mac installer</strong>.</span></li>
-              <li><span>Open the downloaded <span class="code">.command</span> file. If macOS blocks it, right-click the file and choose Open.</span></li>
-              <li><span>The command creates a Timebox extension folder and opens Chrome’s extensions page.</span></li>
-              <li><span>Turn on <strong>Developer mode</strong>, click <strong>Load unpacked</strong>, then choose the Timebox folder.</span></li>
-            </ol>
+          <div class="panel">
+            <h2>Compatibility notes</h2>
+            <p>Desktop Chrome uses the same manual extension flow on Windows, Mac, Linux, and Chromebook: Developer mode, then Load unpacked.</p>
+            <p>Mobile Chrome and managed school/work devices may block extension installation. If Chrome will not show Developer mode or Load unpacked, use a personal desktop computer.</p>
           </div>
         </div>
       </section>
 
       <section class="section">
         <h2>After the Chrome Web Store listing is approved</h2>
-        <p class="lead">The easiest install path will be the official Chrome Web Store button. This download path is here so people can still use the real extension for your class presentation while the store review finishes.</p>
+        <p class="lead">The official Chrome Web Store button will be the easiest install path. Until then, these downloads let people use the real extension for your presentation.</p>
+        <p class="small">Official references: <a href="https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked">Chrome Load unpacked</a>, <a href="https://support.google.com/chrome_webstore/answer/1698338">Chrome extension compatibility</a>, <a href="https://support.google.com/chromebook/answer/2588006">Chromebook extensions</a>.</p>
         <p><a class="button secondary" href="/download.html">Open downloads</a></p>
       </section>
     </main>

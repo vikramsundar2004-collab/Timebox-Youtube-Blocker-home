@@ -12,7 +12,12 @@ const requiredFiles = [
   "public/downloads/timebox-youtube-blocker-windows.cmd",
   "public/downloads/timebox-youtube-blocker-mac.command",
   "public/downloads/timebox-youtube-blocker-extension.zip",
-  "public/assets/setup-walkthrough.webm"
+  "public/assets/setup-windows.webm",
+  "public/assets/setup-mac.webm",
+  "public/assets/setup-chromebook-linux.webm",
+  "public/assets/setup-windows-poster.png",
+  "public/assets/setup-mac-poster.png",
+  "public/assets/setup-chromebook-linux-poster.png"
 ];
 
 const forbiddenText = [

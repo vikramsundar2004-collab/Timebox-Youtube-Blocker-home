@@ -10,7 +10,7 @@ This version is built for an in-person launch: people pay by cash, then open the
 - Windows `.cmd` installer
 - Mac `.command` installer
 - Raw extension zip for manual install
-- Setup page with video and written steps
+- Setup page with a real trimmed Windows install video plus Mac and manual setup guide videos
 - Privacy, support, and terms pages
 - Render static site configuration
 
@@ -19,12 +19,26 @@ This version is built for an in-person launch: people pay by cash, then open the
 ```bash
 npm install
 npm run prepare:downloads
+npm run build:video
 ```
 
 Then open:
 
 ```text
 public/index.html
+```
+
+The video build script uses the real Windows screen recording at:
+
+```text
+C:\Users\vikra\OneDrive\Videos\Screen Recordings\Screen Recording 2026-05-21 165050.mp4
+```
+
+If that recording is moved, run:
+
+```powershell
+$env:TIMEBOX_SETUP_RECORDING="C:\path\to\setup-recording.mp4"
+npm run build:video
 ```
 
 The download preparation script expects the real extension zip at:
@@ -79,3 +93,7 @@ npm test
 ```
 
 The test script verifies that the static pages and download files exist and that old payment flow text is gone.
+
+## Research Notes
+
+The manual install flow follows Chrome's official unpacked-extension setup: open `chrome://extensions`, enable Developer mode, then choose Load unpacked. The site also warns that mobile Chrome and managed school/work devices may block extensions.
